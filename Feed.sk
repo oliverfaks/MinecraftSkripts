@@ -1,0 +1,4 @@
+command /feed:
+    trigger:
+        set player's hunger to 10
+# You can make it send a message with "Send "YOUR MESSAGE" to player"
