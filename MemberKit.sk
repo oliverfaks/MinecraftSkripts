@@ -1,0 +1,23 @@
+options:
+	prefix: "YOUR PREFIX HERE"
+
+command /kit member:
+	permission: kit.member
+	permission message: &cWays&4Box &f» &cYou do not have permission to do this! you need test rank!
+	cooldown: 1 day
+	cooldown message: &cWays&4Box &f» &cStop! you have to wait %remaining time%
+	cooldown storage: {kitmember::%player's uuid%}
+	cooldown bypass: op
+	trigger:
+		give player {memberkit}
+		send "{@prefix} Member kit claimed" to player
+
+command /kitcooldownreset <player>:
+	trigger:
+		delete {kitmember::%player's uuid%}
+
+command /SetKitMember:
+	trigger:
+		set {memberkit} to player's tool
+
+# This is good for Box servers and i suggest using a shulker box as a kit item as it makes it way more easy to give the player the items they need
